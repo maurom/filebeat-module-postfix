@@ -32,7 +32,7 @@ These instructions assume you have a working Filebeat installation.
     
 3. Enable the module:
  
-        filebeat modules enable exim4
+        filebeat modules enable postfix
     
 4. Restart Filebeat (if necessary).
 
