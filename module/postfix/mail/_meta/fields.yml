@@ -1,0 +1,54 @@
+---   # field mappings for filebeat-module-postfix
+- key: postfix
+  title: "Postfix"
+  description: >
+    Module for parsing Postfix log files.
+  short_config: true
+  fields:
+    - name: postfix
+      type: group
+      description: >
+        Fields from the Postfix log files.
+      fields:
+        - name: mail
+          type: group
+          description: >
+            Fields from a mail message.
+          fields:
+            - name: queue_id
+              type: keyword
+              description: >
+                The Hexadecimal Queue ID for this message in the postfix queue.
+            - name: remote_host
+              type: text
+              description: >
+                The hostname of the remote server that delivered this message.
+            - name: remote_address
+              type: ip
+              description: >
+                The IP address of the remote server that delivered this message.
+            - name: login_username
+              type: keyword
+              description: >
+                The username of the user that logged in.
+            - name: from
+              type: keyword
+              description: >
+                The sender's email address as it appears on the envelope.
+            - name: bytes
+              type: long
+              description: >
+                The message size measured in bytes.
+            - name: nrcpt
+              type: int
+              description: >
+                The number of recipients of this email message.
+            - name: to
+              type: text
+              description: >
+                The email addresses of the recipient(s) of this email message.
+            - name: status
+              type: text
+              description: >
+                The status of this message after being processed by a Postfix module.
+

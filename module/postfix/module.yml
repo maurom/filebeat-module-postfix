@@ -1,0 +1,19 @@
+# Filebeat module for Postfix Logs
+# Mauro A. Meloni <maumeloni@gmail.com>
+#
+# Version: 2019-12-03 12:51
+
+# Based on
+# - Filebeat module for postfix
+#   https://github.com/rhpenguin/Filebeat-module-for-Postfix
+# - Postfix Dashboards, Visualizations and Saved Searches for Kibana
+#   https://github.com/ActionScripted/elastic-kibana-postfix
+# - Logstash grok patterns for postfix logging
+#   https://github.com/whyscream/postfix-grok-patterns
+# - Standard Filebeat modules
+#   https://github.com/elastic/beats/tree/master/filebeat
+
+#dashboards:
+#- id: Filebeat-Postfix-Dashboard
+#  file: Filebeat-postfix.json
+#  /usr/share/filebeat/kibana/7/dashboard/

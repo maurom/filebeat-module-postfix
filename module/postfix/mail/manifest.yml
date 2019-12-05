@@ -1,0 +1,14 @@
+---   # manifest for filebeat-module-postfix
+module_version: 1.1
+
+var:
+  - name: paths
+    default:
+      - /var/log/mail/mail.log*
+
+ingest_pipeline: ingest/default.yml
+input: config/mail.yml
+
+requires.processors:
+  - name: geoip
+    plugin: ingest-geoip
